@@ -1,0 +1,217 @@
+body {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: #000;
+   font-size: 16px;
+}
+
+header {
+   height: 9vh;
+   padding: 0.22rem 3rem;
+   display: flex;
+   align-items: center;
+   font-size: 1.625rem; /* 26px */
+   letter-spacing: 0.188rem; /* 3px */
+   text-transform: uppercase;
+   text-align: center;
+   background-color: #282828;
+   color: white;
+}
+
+.container {
+   display: flex;
+   flex-wrap: wrap;
+   max-width: 75rem; /* 1200px */
+   margin: 2rem auto;
+   border-radius: 0.938rem; /* 15px */
+   overflow: hidden;
+}
+
+.image-side {
+   flex: 2;
+   min-height: 28.125rem; /* 450px */
+   position: relative;
+   overflow: hidden;
+}
+
+.image-side > img {
+   width: 78%;
+   height: 100%;
+   object-fit: contain;
+}
+
+.form-side {
+   flex: 1;
+   padding: 2.5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   min-height: 28.125rem; /* 450px */
+}
+
+.form-side h2 {
+   font-size: 1.75rem; /* 28px */
+   margin-bottom: 0.625rem; /* 10px */
+   color: #282828;
+   text-align: center;
+}
+
+.form-side p {
+   font-size: 1rem; /* 16px */
+   margin-bottom: 1.563rem; /* 25px */
+   color: #555;
+   text-align: center;
+}
+
+label {
+   font-weight: 500;
+   margin-bottom: 0.925rem !important; /* 10px */
+   color: #000;
+}
+
+.form-side input[type="text"],
+.form-side input[type="number"],
+.form-side button {
+   width: 100%;
+   padding: 0.75rem; /* 12px 15px */
+   margin-bottom: 1.25rem; /* 20px */
+   border-radius: 0.5rem; /* 8px */
+   border: 1px solid #ddd;
+   font-size: 1rem; /* 16px */
+   transition: all 0.3s ease;
+}
+
+.form-side input[type="text"]:focus,
+.form-side input[type="number"]:focus {
+   outline: none;
+   border-color: #8158d0;
+   box-shadow: 0 0 0.75rem rgba(108, 99, 255, 0.2); /* 12px */
+}
+
+.form-side button {
+   background-color: #8158d0;
+   color: white;
+   border: none;
+   cursor: pointer;
+   font-weight: 600;
+   text-transform: uppercase;
+   box-shadow: 0 0.938rem 0.938rem rgba(108, 99, 255, 0.2); /* 15px */
+   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-side button:hover {
+   background-color: #8158d0;
+   box-shadow: 0 1.25rem 1.25rem rgba(111, 104, 235, 0.4); /* 20px */
+}
+
+footer {
+   height: 8vh;
+   background-color: #282828;
+   color: white;
+   text-align: center;
+   padding: 1.25rem; /* 20px */
+   font-size: 0.875rem; /* 14px */
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+footer p {
+   margin: 0.313rem 0; /* 5px */
+}
+
+footer a {
+   color: #8158d0;
+   text-decoration: none;
+}
+
+footer a:hover {
+   text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+   .container {
+       max-width: 90%;
+       margin: 1.25rem auto; /* 20px */
+   }
+
+   .form-side {
+       padding: 1.875rem; /* 30px */
+       min-height: 25rem; /* 400px */
+   }
+
+   header {
+       padding: 1.25rem 1.875rem; /* 20px 30px */
+   }
+
+   .image-side {
+       min-height: 21.875rem; /* 350px */
+   }
+}
+
+@media (max-width: 768px) {
+   .container {
+       flex-direction: column;
+       box-shadow: none;
+       margin: 0.625rem auto; /* 10px */
+   }
+
+   .form-side {
+       padding: 1.25rem; /* 20px */
+       min-height: auto;
+   }
+
+   header {
+       font-size: 1.375rem; /* 22px */
+       padding: 0.938rem 1.25rem; /* 15px 20px */
+   }
+
+   .image-side {
+       min-height: 18.75rem; /* 300px */
+   }
+
+   .form-side h2 {
+       font-size: 1.5rem; /* 24px */
+   }
+
+   .form-side input[type="text"],
+   .form-side input[type="number"],
+   .form-side button {
+       padding: 0.625rem; /* 10px 12px */
+       font-size: 0.875rem; /* 14px */
+   }
+}
+
+@media (max-width: 480px) {
+   header {
+       font-size: 1.25rem; /* 20px */
+       padding: 0.938rem 0.625rem; /* 15px 10px */
+   }
+
+   .form-side {
+       padding: 1rem;
+   }
+
+   .form-side h2 {
+       font-size: 1.375rem; /* 22px */
+   }
+
+   .form-side input[type="text"],
+   .form-side input[type="number"],
+   .form-side button {
+       padding: 0.5rem; /* 8px 10px */
+       font-size: 0.875rem; /* 14px */
+   }
+
+   .image-side {
+       min-height: 15.625rem; /* 250px */
+   }
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
