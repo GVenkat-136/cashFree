@@ -1,31 +1,24 @@
-document.getElementById('paymentForm').addEventListener('submit', function(e) {
-    e.preventDefault(); // Prevent the form from submitting the traditional way
-
+document.getElementById('paymentForm').addEventListener('submit', async function(e){
+    e.preventDefault();
     const number = document.getElementById('number').value.trim();
     const name = document.getElementById('name').value.trim();
     const amount = parseFloat(document.getElementById('amount').value.trim());
     let validationPassed = true;
     let errorMessage = '';
 
-    // Validate phone number (10 digits)
     const phoneRegex = /^\d{10}$/;
     if (!phoneRegex.test(number)) {
         validationPassed = false;
         errorMessage += 'Enter a valid number';
     }
-
-    // Validate name (min 3 characters, max 100 characters)
     if (name.length < 3 || name.length > 100) {
         validationPassed = false;
         errorMessage += 'Name must be between 3 and 100 characters.\n';
     }
-
-    // Validate amount (minimum 100)
     if (isNaN(amount) || amount < 100) {
         validationPassed = false;
         errorMessage += 'Amount must be at least 100.\n';
     }
-
     if (!validationPassed) {
         alert(errorMessage);
         return;
@@ -45,14 +38,11 @@ document.getElementById('paymentForm').addEventListener('submit', function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        if (data.paymentLink) {
-            window.location.href = data.paymentLink;
-        } else {
-            document.getElementById('responseMessage').textContent = 'Payment initiation failed.';
-        }
+        localStorage.setItem('session', data.payment_session_id)
+        window.location.href = 'https://cashfree.onrender.com/payment'
     })
     .catch(error => {
         console.error('Error:', error);
         document.getElementById('responseMessage').textContent = 'An error occurred. Please try again.';
     });
-});
+})

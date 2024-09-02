@@ -8,7 +8,7 @@ body {
 }
 
 header {
-   height: 9vh;
+   height: 6vh;
    padding: 0.22rem 3rem;
    display: flex;
    align-items: center;
@@ -179,8 +179,14 @@ footer a:hover {
    .form-side input[type="text"],
    .form-side input[type="number"],
    .form-side button {
-       padding: 0.625rem; /* 10px 12px */
+       padding: 0.45rem; /* 10px 12px */
        font-size: 0.875rem; /* 14px */
+   }
+
+   footer {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
    }
 }
 
@@ -201,12 +207,18 @@ footer a:hover {
    .form-side input[type="text"],
    .form-side input[type="number"],
    .form-side button {
-       padding: 0.5rem; /* 8px 10px */
+       padding: 0.44rem; /* 8px 10px */
        font-size: 0.875rem; /* 14px */
    }
 
    .image-side {
        min-height: 15.625rem; /* 250px */
+   }
+
+   footer {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
    }
 }
 
