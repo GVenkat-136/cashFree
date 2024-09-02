@@ -23,7 +23,8 @@ if(sessionId){
           console.log("Payment has been completed, Check for Payment Status");
           console.log(result.paymentDetails.paymentMessage);
       }
+   }).finally(()=>{
+      localStorage.clear()
+      window.location.href = 'https://cashfree.onrender.com'
    })
-   localStorage.clear()
-   window.location.href = 'https://cashfree.onrender.com'
 }
