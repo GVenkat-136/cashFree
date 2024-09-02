@@ -6,10 +6,16 @@ body {
    color: #000;
    font-size: 16px;
 }
+.MainContianer{
+   max-height: 100vh !important;
+   display: flex;
+   flex-direction: column;
+   overflow-y: scroll;
+}
 
 header {
-   height: 6vh;
-   padding: 0.22rem 3rem;
+   flex-basis: 10% !important;
+   padding: 20px;
    display: flex;
    align-items: center;
    font-size: 1.625rem; /* 26px */
@@ -21,6 +27,7 @@ header {
 }
 
 .container {
+   flex-basis: 86% !important;
    display: flex;
    flex-wrap: wrap;
    max-width: 75rem; /* 1200px */
@@ -107,11 +114,11 @@ label {
 }
 
 footer {
-   height: 8vh;
+   flex-basis: 10% !important;
    background-color: #282828;
    color: white;
    text-align: center;
-   padding: 1.25rem; /* 20px */
+   padding: 21px; /* 20px */
    font-size: 0.875rem; /* 14px */
    display: flex;
    justify-content: space-around;
