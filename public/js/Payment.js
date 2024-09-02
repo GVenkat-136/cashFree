@@ -8,7 +8,7 @@ if(sessionId){
       redirectTarget: document.getElementById("cf_checkout"),
       appearance: {
          width: window.innerWidth <= 425 ? "100%" : "425px",
-         height:"700px",
+         height:"500px",
      },
    };
    cashfree.checkout(checkoutOptions).then((result) => {
