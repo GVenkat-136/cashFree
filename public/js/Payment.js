@@ -24,6 +24,6 @@ if(sessionId){
           console.log(result.paymentDetails.paymentMessage);
       }
    })
-   window.length.href = 'https://cashfree.onrender.com'
    localStorage.clear()
+   window.location.href = 'https://cashfree.onrender.com'
 }
